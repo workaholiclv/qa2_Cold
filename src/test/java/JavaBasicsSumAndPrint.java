@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Test;
 // Class work Nr.1.
 
 //Creating main class
-public class classWorkNr1 {
+public class JavaBasicsSumAndPrint {
 
     //String with text "Sum is"
     private String text = "Sum is ";
