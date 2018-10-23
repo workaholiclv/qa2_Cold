@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HomeWork_N2 {
+public class trainingNr2 {
 
     private final By ARTICLE_DTITLE =  By.xpath(".//a[@class = 'top2012-title']");
     private final By ARTICLE_MTITLE =  By.xpath(".//a[@class = 'md-mosaic-img md-scrollpos']");
