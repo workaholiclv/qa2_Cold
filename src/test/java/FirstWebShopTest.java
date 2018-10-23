@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-// Homework Nr.3.
+//Homework Nr.3.
 
 //Creating main class
 public class FirstWebShopTest {
