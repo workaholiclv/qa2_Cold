@@ -9,13 +9,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class DelfiTitlesComaprisonDesktpVSMobile {
+public class DelfiFiveTitlesComaprison {
 
 // Xpath definition for delfi.lv desktop version and mobile version
     private final By deskArticles = By.xpath(".//a[@class = 'top2012-title']");
-    private final By mobileArticles= By.xpath(".//a[@class='md-scrollpos']");
 
-// Titles to check from delfi.lv / m.delfi.lv
+// Titles to check from delfi.lv
     private String titleOne = ("Lidlauka 'Spilve' juridisko 'kalambūru' Rīgas dome atrisinās ar buldozeru");
     private String titleTwo = ("Futbola 'toto' skandāla četri gadi: ilgstoša izmeklēšana un tiesas pats sākums");
     private String titleThree = ("Tramps: ASV izstāšanos no kodollīguma motivējusi arī Ķīnas arsenāla stiprināšana");
@@ -50,28 +49,6 @@ public class DelfiTitlesComaprisonDesktpVSMobile {
             articles.get(i);
 
 // Comparing titles from variable articleTitles (given) to articles from array which we created previously
-            Assertions.assertEquals(articleTitles.get(i), articles.get(i).getText());
+            Assertions.assertEquals(articleTitles.get(i), articles.get(i).getText() "Articles not equals");
         }
-
-         driver.get(http://m.delfi.lv);
-// Creating list with articles from xPath of m.delfi.lv mobile version  
-         List<WebElement> mobileArticles = driver.findElements(mobileArticles);
-
-         for (int m = 0; m < 5; m++) {
-             mobileArticles.get(m);
-// Comparing titles from variable articleTitles (given) to articles from array which we created previously
-             Assertions.assertEquals(articleTitles.get(m), mobileArticles.get(m).getText());
-        }
-            @Test
-    //compare m.Delfi.lv articles with Delfi.lv articles
-    public void compareArticles () {
-        Assertions.assertEquals(articles(), mobileArticles(), "Mobile Articles / Desktop Articles not equal");
-    }
-
-    }
-    @AfterEach
-    public void closeDriver() {
-        driver.close();
-    }
-
     }
