@@ -1,6 +1,9 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+// Homework Nr.1.
+
+//Creating main class
 public class LoanCalculator {
     
     // Variables for calculations: one (default) and loanPeriod (10 years)
