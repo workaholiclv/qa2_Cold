@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-//Class work Nr.4.
+// Class work Nr.4.
 
 //Creating main class
 public class JavaBasicsListArrayExamples {
