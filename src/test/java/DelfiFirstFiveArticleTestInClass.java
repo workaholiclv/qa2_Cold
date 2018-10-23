@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.ArrayList;
 import java.util.List;
 
-//Class work Nr.3.
+// Class work Nr.3.
 
 //Creating main class
 public class DelfiFirstFiveArticleTestInClass {
