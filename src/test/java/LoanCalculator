@@ -10,6 +10,9 @@ public class LoanCalculator {
     // Variables for loanAmount and totalAmountToPay which we expect to receive
     private double takenLoanAmount = 2500;
     private double totalAmountToPay = 6000;
+    
+    //Printing to the screen expected loan amount to pay and calculated loan amount to pay
+    System.out.println("Expected loan amount to pay: " + totalAmountToPay + " EUR" + " . Calculated loan amount to pay" + loanAmountForThirtyYears + " EUR");
 
     @Test
     public void loanCalculation() {
@@ -32,8 +35,7 @@ public class LoanCalculator {
         //Comparing our calculation result with expected result from variable totalAmountToPay
         Assertions.assertEquals(totalAmountToPay,loanAmountForThirtyYears,"Entered totalAmountToPay is incorrect!");
         
-        //Printing to the screen expected loan amount to pay and calculated loan amount to pay
-        System.out.println("Expected loan amount to pay: " + totalAmountToPay + " EUR" + " . Calculated loan amount to pay" + loanAmountForThirtyYears + " EUR");
-
+       //double loanAmountForThirtyYears = (takenLoanAmount(one + loanPeriod * 0.1)) + (takenLoanAmount(one + loanPeriod * 0.8)) + (takenLoanAmount(one + loanPeriod * 0.6));
+    
     }
 }
