@@ -1,7 +1,7 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-// Homework Nr.1.
+//Homework Nr.1.
 
 public class LoanCalculator {
 
