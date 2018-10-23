@@ -1,6 +1,6 @@
 import org.junit.jupiter.api.Test;
 
-// Class work Nr.1.
+//Class work Nr.1.
 
 //Creating main class
 public class JavaBasicsSumAndPrint {
