@@ -8,6 +8,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.ArrayList;
 import java.util.List;
 
+//Homework Nr.3.
+
 // Creating main class
 public class DelfiFiveTitlesComparisonDesktpVSMobile {
 
