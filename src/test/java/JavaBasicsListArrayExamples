@@ -20,6 +20,15 @@ public class JavaBasicsListArrayExamples {
         klase.add("Ieva");
         klase.add("Sergejs");
         
+// Print out every name from list array "klase"
+//        for (String name : klase) {
+//        System.out.println(name);
+//         }
+// Print out every 2nd name from list array "klase"
+//        for (int i = 0; i < klase.size(); i += 2) {
+//            System.out.println(klase.get(i));
+//        }
+        
         //Checking size of the list "klase", printing out result
         System.out.println("Size of List is:" +  klase.size());
         
