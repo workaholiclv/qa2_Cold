@@ -1,6 +1,6 @@
 import org.junit.jupiter.api.Test;
 
-public class First_03_10 {
+public class classWorkNr1 {
 
     private String text = "Sum is ";
 
