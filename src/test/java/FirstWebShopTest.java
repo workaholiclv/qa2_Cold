@@ -45,7 +45,7 @@ public class FirstWebShopTest {
     }
 
     // This method will help us to select menu item from MainMenuItems
-    private void selectMenuItem(String menuItem) {
+    private void selectMenuItem(String menuItem,WebDriver driver) {
         List<WebElement> menuItems = driver.findElements(MainMenuItems);
 
         for (int i = 0; i < menuItems.size(); i++) {
@@ -57,7 +57,7 @@ public class FirstWebShopTest {
     }
 
     // This method will help us to select check box item from FilterCheckBox
-    private void selectFilter(String filterName) {
+    private void selectFilter(String filterName,WebDriver driver) {
         List<WebElement> filterItems = driver.findElements(FilterCheckBox);
 
         for (int i = 0; i < filterItems.size(); i++) {
@@ -69,7 +69,7 @@ public class FirstWebShopTest {
     }
 
     /* Waiting - adding browser window in which we are waiting for result, timeout - how long we'll wait, then adding condition which we expect. Selenium will be constantly checking whether condition is met, if yes, then we don't have to wait and moving forward, saving our time  */
-    private void waitLoad() {
+    private void waitLoad(WebDriver driver) {
         new WebDriverWait(driver, new WebDriverWait(driver, 10).until(ExpectedConditions.invisibilityOfElementLocated(Loader));
     }
 }
