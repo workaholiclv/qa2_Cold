@@ -12,6 +12,13 @@ public class DelfiTitleAndCommentCountComparison {
     private final By ETHALON_TITLE = By.xpath(".//a[@class = 'top2012-title']");
     private final By ETHALON_COMMENT_COUNT = By.xpath(".//a[@class = 'comment-count']");
     private final By ETHALON_TITLE_COMMENT = By.xpath(".//h3[@class = 'top2012-title']");
+   
+    private final By THIRD_ARTICLE_TITLE = By.xpath(".//h1[@class = 'article-title']");
+    private final By THIRD_ARTICLE_TITLE_COMMENTS = By.xpath(".//div[@class= 'article-title']");
+    
+    private final By COMMENTS_ARTICLE_TITLE = By.xpath(".//h1[@class = 'comments-about-title-h1']");
+    private final By COMMENTS_ARTICLE_TITLE_COM_REG = By.xpath(".//a[@class= 'comment-thread-switcher-list-a comment-thread-switcher-list-a-reg']");
+    private final By COMMENTS_ARTICLE_TITLE_COM_REG = By.xpath(".//a[@class= 'comment-thread-switcher-list-a comment-thread-switcher-list-a-anon']");
 
     @Test
     public void practice() {
@@ -36,10 +43,9 @@ public class DelfiTitleAndCommentCountComparison {
         //go to the 3rd article page
         thirdElement.findElement(ETHALON_TITLE).click();
         //create article page title locator
-
         //create article page comments locator
         //get article title
-        //find comment count
+        //find comment countTHIRD_ARTICLE_TITLE
         //cut comment brackets
         //convert comment count string to int
         //check article titles with 1st page
