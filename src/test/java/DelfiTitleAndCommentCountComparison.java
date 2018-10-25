@@ -17,10 +17,10 @@ public class DelfiTitleAndCommentCountComparison {
     public void practice() {
         //open browser
         //open delfi
-        System.setProperty("webdriver.gecko.driver", "c:/geckodriver.exe");
-        WebDriver driver = new FirefoxDriver();
-        driver.manage().window().maximize();
-        driver.get("http://www.delfi.lv");
+        System.setProperty("webdriver.chrome.driver","/Users/user/Downloads/chromedriver");
+        WebDriver driver = new ChromeDriver();
+        driver.manage().window().fullscreen();
+        driver.get("http://delfi.lv");
         //find main page article elements
         List<WebElement> articles = driver.findElements(ETHALON_TITLE_COMMENT);
         //find main page 3rd element
