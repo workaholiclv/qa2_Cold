@@ -14,8 +14,8 @@ import java.util.List;
 public class DelfiFiveTitlesComparisonDesktpVSMobile {
 
     // Xpath definition for delfi.lv desktop version and mobile version
-    private final By deskArticles = By.xpath(".//a[@class='top2012-title']");
-    private final By mobileArticles = By.xpath(".//a[@class='md-scrollpos']");
+    private final By WEB_ARTICLES = By.xpath(".//a[@class='top2012-title']");
+    private final By MOB_ARTICLES = By.xpath(".//a[@class='md-scrollpos']");
 
     // Test component from Junit
     @Test
@@ -30,8 +30,8 @@ public class DelfiFiveTitlesComparisonDesktpVSMobile {
 // Open in browser this website
         driver.get("http://delfi.lv/");
 
-// Creating list with 5 articles from xPath of delfi.lv desktop version (variable: deskArticles)
-        List<WebElement> webVerArticleList = driver.findElements(deskArticles);
+// Creating list with 5 articles from xPath of delfi.lv desktop version (variable: WEB_ARTICLES)
+        List<WebElement> webVerArticleList = driver.findElements(WEB_ARTICLES);
         List<String> webVerArticles = new ArrayList<String>();
         int i;
         for (i = 0; i < 5; i++) {
@@ -41,8 +41,8 @@ public class DelfiFiveTitlesComparisonDesktpVSMobile {
 // Open in browser this website
         driver.get("http://m.delfi.lv/");
 
-// Creating list with 5 articles from xPath of m.delfi.lv mobile version (variable: mobileArticles)
-        List<WebElement> mobVerArticleList = driver.findElements(mobileArticles);
+// Creating list with 5 articles from xPath of m.delfi.lv mobile version (variable: MOB_ARTICLES)
+        List<WebElement> mobVerArticleList = driver.findElements(MOB_ARTICLES);
         List<String> mobVerArticles = new ArrayList<String>();
         for (i = 0; i < 5; i++) {
             mobVerArticles.add(mobVerArticleList.get(i).getText());
