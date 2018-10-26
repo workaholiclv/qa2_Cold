@@ -17,8 +17,8 @@ public class DelfiTitleAndCommentCountComparison {
     private final By THIRD_ARTICLE_TITLE_COMMENTS = By.xpath(".//div[@class= 'article-title']");
     
     private final By COMMENTS_ARTICLE_TITLE = By.xpath(".//h1[@class = 'comments-about-title-h1']");
-    private final By COMMENTS_ARTICLE_TITLE_COM_REG = By.xpath(".//a[@class= 'comment-thread-switcher-list-a comment-thread-switcher-list-a-reg']");
-    private final By COMMENTS_ARTICLE_TITLE_COM_REG = By.xpath(".//a[@class= 'comment-thread-switcher-list-a comment-thread-switcher-list-a-anon']");
+    private final By REG_COMMENTS_ARTICLE_TITLE = By.xpath(".//a[@class= 'comment-thread-switcher-list-a comment-thread-switcher-list-a-reg']");
+    private final By ANON_COMMENTS_ARTICLE_TITLE = By.xpath(".//a[@class= 'comment-thread-switcher-list-a comment-thread-switcher-list-a-anon']");
 
     @Test
     public void practice() {
