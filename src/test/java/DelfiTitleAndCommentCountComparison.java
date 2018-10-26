@@ -13,12 +13,17 @@ public class DelfiTitleAndCommentCountComparison {
     private final By ETHALON_COMMENT_COUNT = By.xpath(".//a[@class = 'comment-count']");
     private final By ETHALON_TITLE_COMMENT = By.xpath(".//h3[@class = 'top2012-title']");
    
+    //create article page title locator
+    //create article page comments locator
     private final By THIRD_ARTICLE_TITLE = By.xpath(".//h1[@class = 'article-title']");
     private final By THIRD_ARTICLE_TITLE_COMMENTS = By.xpath(".//div[@class= 'article-title']");
     
+    //create comment pages title locator
+    //create registered users comment count locator
+    //create anonymous users comment count locator
     private final By COMMENTS_ARTICLE_TITLE = By.xpath(".//h1[@class = 'comments-about-title-h1']");
-    private final By REG_COMMENTS_ARTICLE_TITLE = By.xpath(".//a[@class= 'comment-thread-switcher-list-a comment-thread-switcher-list-a-reg']");
-    private final By ANON_COMMENTS_ARTICLE_TITLE = By.xpath(".//a[@class= 'comment-thread-switcher-list-a comment-thread-switcher-list-a-anon']");
+    private final By REG_COMMENTS_ARTICLE_TITLE = By.xpath(".//a[@class= 'comment-thread-switcher-list-a-reg");
+    private final By ANON_COMMENTS_ARTICLE_TITLE = By.xpath(".//a[@class= 'comment-thread-switcher-list-a-anon']");
 
     @Test
     public void practice() {
