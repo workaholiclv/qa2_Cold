@@ -18,7 +18,7 @@ public class Test {
  //create article page title locator
  //create article page comments locator
  private final By THIRD_ARTICLE_TITLE = By.xpath(".//h1[@class = 'article-title']");
- private final By THIRD_ARTICLE_TITLE_COMMENTS = By.xpath(".//a[@class = 'comment-count']");
+ private final By THIRD_ARTICLE_TITLE_COMMENTS = By.xpath(".//div[@class= 'article-title']/a[1]");
 
  //create comment pages title locator
  //create registered users comment count locator
