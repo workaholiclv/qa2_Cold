@@ -24,8 +24,8 @@ public class Test {
  //create registered users comment count locator
  //create anonymous users comment count locator
  private final By COMMENTS_ARTICLE_TITLE = By.xpath(".//h1[@class = 'comments-about-title-h1']");
- private final By REG_COMMENTS_ARTICLE_TITLE = By.xpath(".//a[@class= 'comment-thread-switcher-list-a-reg");
- private final By ANON_COMMENTS_ARTICLE_TITLE = By.xpath(".//a[@class= 'comment-thread-switcher-list-a-anon']");
+ private final By REG_COMMENTS_ARTICLE_TITLE = By.xpath("//div[@id='comments-listing']/div/a[1]/span");
+ private final By ANON_COMMENTS_ARTICLE_TITLE = By.xpath("//div[@id='comments-listing']/div/a[2]/span']");
 
 
  @Test
