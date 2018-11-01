@@ -1,4 +1,6 @@
 import org.junit.Test;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,6 +16,7 @@ public class FirstShopTest {
 
     // Taking WebDriver to class level so it will be visible in all of the methods of this class
     private WebDriver driver;
+    
     // Variables with web shop address and menu xPathes
     private final String HOME_PAGE = "http://automationpractice.com";
     private final By MAIN_MENU_ITEMS = By.xpath(".//ul[@class = 'sf-menu clearfix menu-content sf-js-enabled sf-arrows']/li/a");
@@ -21,14 +24,19 @@ public class FirstShopTest {
     private final By COLOR_FILTER = By.xpath(".//ul[@class = 'col-lg-12 layered_filter_ul color-group']/li/label");
     private final By LOADER = By.xpath(".//ul[@class = 'product_list grid row']/p");
     private final By LIST_VIEW_ICON = By.className("icon-th-list");
+    private final Logger LOGGER = LogManager.getLogger(FirstShopTest.class);
 
     // Adding Junit component test
     @Test
     public void dressesTest() {
-
+        LOGGER.info("Setting Chrome driver global property");
         System.setProperty("webdriver.chrome.driver","/Users/user/Downloads/chromedriver");
+        
+        LOGGER.info("Open browser");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().fullscreen();
+        
+        LOGGER.info("Openning home page");
         driver.get(HOME_PAGE);
 
         // Selecting menu item "WOMEN". Code wich could be reusable in other places we can write in separate method which we can call by parameters
@@ -40,12 +48,15 @@ public class FirstShopTest {
 
         selectFilter("Orange", COLOR_FILTER);
         waitLoad();
-
+        
+        LOGGER.info("Click to view icon");
         driver.findElement(LIST_VIEW_ICON).click();
     }
 
     // This method could be used to choose any item from main menu, we only need to pass it as parameter
     private void selectMenuItem(String menuItem) {
+         LOGGER.info("Selecting" +
+                "menuItem");
         List<WebElement> menuItems = driver.findElements(MAIN_MENU_ITEMS);
 
         // This cicle is receiving 3 parameters: from which element entering to which and with what step (i++)
@@ -60,7 +71,7 @@ public class FirstShopTest {
     }
 
     private void selectFilter(String filterName, By locator) {
-
+        LOGGER.info("Selecting from filter" +"filterName");
         List<WebElement> filterItems = driver.findElements(locator);
 
         // Сicle for analogue - this entry should be used if bypass all list elements
