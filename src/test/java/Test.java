@@ -53,9 +53,9 @@ public class Test {
   //create article page title locator
   //create article page comments locator
   //get article title
-  WebElement articleTitleOnPage = driver.findElement(THIRD_ARTICLE_TITLE).getText();
+  String articleTitleOnPage = driver.findElement(THIRD_ARTICLE_TITLE).getText();
   //find comment count 
-  WebElement articleTitleOnPageComment = driver.findElement(THIRD_ARTICLE_TITLE_COMMENTS).getText();
+  String articleTitleOnPageComment = driver.findElement(THIRD_ARTICLE_TITLE_COMMENTS).getText();
   //cut comment brackets
   articleTitleOnPageComCount = articleTitleOnPageComment.substring(1, articleTitleOnPageComment.length() - 1);
   //convert comment count string to int
@@ -65,25 +65,29 @@ public class Test {
   //check comment counts
   Assertions.assertEquals(articleTitleOnPageComCountInt, articleCommentCount, "Main page article title comments count is not equal to separate page article title comments count!");
   //go to the comment page
-
+  driver.findElement(THIRD_ARTICLE_TITLE_COMMENTS).click();
   //create comment pages title locator
   //create registered users comment count locator
   //create anonymous users comment count locator
   //get comment pages title text
-  String commentPageTitle = driver.findElement(COMMENTS_ARTICLE_TITLE).getText();
+  String commentPageArticle = driver.findElement(COMMENT_PAGE_TITLE).getText();
   //check comment page title with main page title (e-talon :))
   Assertions.assertEquals(commentPageTitle, thirdArticle, "Main page article title is not equal to comment page article title!");
   //find comment page registered users comment count
+  String commentPageRegUsersComments = driver.findElement(REG_COMMENTS_ARTICLE_TITLE).getText();
   //cut comment brackets
+  countOfRegUsersCommentonPage = commentPageRegUsersComments.substring(1, commentPageRegUsersComments.length() - 1);
   //convert comment count string to int
+  int countOfRegUsersCommentonPageInt = Integer.valueOf(countOfRegUsersCommentonPage);
   //find comment page anonymous users comment count
+  String commentPageAnonUsersComments = driver.findElement(ANON_COMMENTS_ARTICLE_TITLE).getText();
   //cut comment brackets
+  countOfAnonUsersCommentonPage = commentPageAnonUsersComments.substring(1, commentPageAnonUsersComments.length() - 1);
   //convert comment count string to int
+  int countOfAnonUsersCommentonPageInt = Integer.valueOf(countOfAnonUsersCommentonPage);
   //sum anonymous and registered comments
+  int sumOfAnonAndRegUsersComments = countOfRegUsersCommentonPageInt + countOfAnonUsersCommentonPageInt
   //check sum of anonymous and registered comments count with main pages comments count
-
-
-
-
+  Assertions.assertEquals(sumOfAnonAndRegUsersComments, articleCommentCount, "Main page article comment count is not equal to registered and anonymous comment count from comment page!");
  }
 }
