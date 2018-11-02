@@ -64,7 +64,8 @@ public class Test {
   //convert comment count string to int
   int articleTitleOnPageComCountInt = Integer.valueOf(articleTitleOnPageComCount);
   //check article titles with 1st page
-  Assertions.assertEquals(articleTitleOnPage, thirdArticle, "Main page article title is not equal to separate page article title!");
+  Assert.assertTrue("Main page article title is not equal to separate page article title!", articleTitleOnPage.contains(thirdArticle ));
+  //Assertions.assertEquals(articleTitleOnPage, thirdArticle, "Main page article title is not equal to separate page article title!");
   //check comment counts
   Assertions.assertEquals(articleTitleOnPageComCountInt, articleCommentCount, "Main page article title comments count is not equal to separate page article title comments count!");
   //go to the comment page
@@ -75,7 +76,8 @@ public class Test {
   //get comment pages title text
   String commentPageArticle = driver.findElement(COMMENT_PAGE_TITLE).getText();
   //check comment page title with main page title (e-talon :))
-  Assertions.assertEquals(commentPageTitle, thirdArticle, "Main page article title is not equal to comment page article title!");
+  Assert.assertTrue("Main page article title is not equal to comment page article title!", commentPageArticle.contains(thirdArticle));
+  //Assertions.assertEquals(commentPageTitle, thirdArticle, "Main page article title is not equal to comment page article title!");
   //find comment page registered users comment count
   String commentPageRegUsersComments = driver.findElement(REG_COMMENTS_ARTICLE_TITLE).getText();
   //cut comment brackets
