@@ -25,10 +25,10 @@ public class YesOne {
     //create anonymous users comment count locator
     private final By COMMENTS_ARTICLE_TITLE = By.xpath(".//h1[@class = 'comments-about-title-h1']");
     private final By REG_COMMENTS_ARTICLE_TITLE = By.xpath(".//a[contains(@class, 'comment-thread-switcher-list-a-reg')]/span");
-    private final By ANON_COMMENTS_ARTICLE_TITLE = By.xpath(".//a[contains(@class, 'comment-thread-switcher-list-a-anon')]/span']");
+    private final By ANON_COMMENTS_ARTICLE_TITLE = By.xpath(".//a[contains(@class, 'comment-thread-switcher-list-a-anon')]/span");
 
     //private final By REG_COMMENTS_ARTICLE_TITLE = By.xpath("//div[@id='comments-listing']/div/a[1]/span");
-    //private final By ANON_COMMENTS_ARTICLE_TITLE = By.xpath("//div[@id='comments-listing']/div/a[2]/span']");
+    //private final By ANON_COMMENTS_ARTICLE_TITLE = By.xpath("//div[@id='comments-listing']/div/a[2]/span");
 
 
 @org.junit.jupiter.api.Test
@@ -37,7 +37,7 @@ public class YesOne {
         //open delfi
         System.setProperty("webdriver.chrome.driver", "/driver/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
-        driver.manage().window().fullscreen();
+        driver.manage().window().maximize();
         driver.get("http://delfi.lv");
         //find main page article elements
         List < WebElement > articles = driver.findElements(ETHALON_TITLE_COMMENT);
