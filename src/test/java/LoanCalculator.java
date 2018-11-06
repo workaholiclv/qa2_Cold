@@ -3,12 +3,12 @@ import org.junit.jupiter.api.Test;
 
 // Homework Nr.1.
 
-public class LoanCalculator {
+public class LoanCalculatorTest {
     private int takenLoanAmount = 2500;
     private int totalAmountToPay = 13500;
 
     @Test
-    public void myTest() {
+    public void CalculationOfLoan() {
 
         double loanAmountForThirtyYears, firstTenYearsToPay, secondTenYearsToPay, thirdTenYearsToPay;
 
@@ -18,7 +18,7 @@ public class LoanCalculator {
         
         loanAmountForThirtyYears = firstTenYearsToPay + secondTenYearsToPay + thirdTenYearsToPay;
 
-        Assertions.assertEquals(totalAmountToPay, loanAmountForThirtyYears, "Entered totalAmountToPay is incorrect!");
+        Assertions.assertEquals(totalAmountToPay, loanAmountForThirtyYears, "Total amount and calculated amount not equal!");
     }
 
     private double amountReceived(double percent) {
