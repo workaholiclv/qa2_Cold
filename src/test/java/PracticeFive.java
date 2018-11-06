@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.List;
 
 
-public class YesOne {
+public class PracticeFive {
     //create article locator
     //create comment locator
     private final By ETHALON_TITLE = By.xpath(".//a[@class = 'top2012-title']");
